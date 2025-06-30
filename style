@@ -1,0 +1,230 @@
+
+ <style>
+   * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfdfd;
+  color: #2c2c2c;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero {
+  height: 60vh;
+  position: relative;
+  background: url('images/menu.bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero .overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+.hero .overlay h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero .overlay p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  opacity: 0.95;
+}
+
+.hero-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hero-controls .btn {
+  padding: 0.5rem 1rem;
+  background: #ffffff;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hero-controls .btn:hover {
+  background: #f3f3f3;
+}
+
+.btn.cart {
+  background: #e63946;
+  color: #fff;
+  border-radius: 50%;
+  width: 2.8rem;
+  height: 2.8rem;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.category-bar {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1rem 0;
+  overflow-x: auto;
+}
+
+.category-bar-inner {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-box {
+  flex: 0 0 auto;
+  width: 120px;
+  text-align: center;
+  background: #f8f8f8;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.category-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.category-box img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+}
+
+.category-box span {
+  display: block;
+  padding: 0.6rem 0.3rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #1e1e1e;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #e63946;
+  padding-left: 1rem;
+}
+
+section h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.item-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.item-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.item-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.8rem 0 0.4rem;
+  padding: 0 1rem;
+}
+
+.item-card p {
+  font-size: 0.92rem;
+  color: #555;
+  padding: 0 1rem;
+  flex-grow: 1;
+}
+
+.item-card .price {
+  font-weight: 700;
+  color: #e63946;
+  font-size: 1.1rem;
+  margin: 0.8rem 0 1rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero .overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero .overlay p {
+    font-size: 1rem;
+  }
+
+  .hero-controls {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .hero-controls .btn {
+    padding: 0.4rem 0.9rem;
+  }
+
+  .category-bar-inner {
+    padding: 0 1rem;
+    gap: 0.8rem;
+  }
+}
+
+    </style>
